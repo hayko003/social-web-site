@@ -59,6 +59,7 @@ export const totalUsersCountAC = (totalCount) => ({
   type: TOTAL_USER_COUNT,
   payload: totalCount,
 });
+
 // Thunk Creator
 export const getUsersThunk = (page = 1) => {
   return (dispatch) => {
