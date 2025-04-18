@@ -4,7 +4,6 @@ const SET_LOGIN = "set-login";
 
 const initState = {
   userId: null,
-  messages: []
 };
 
 const authReducer = (state = initState, action) => {
@@ -28,7 +27,6 @@ export const setLoginThunk = (email, password) => {
     SocialAPI.setLogin(email, password)
     .then((res) => {
       dispatch(setLoginAC(res.data.data.userId));
-      // dispatch(setLoginAC(res.data.data.messages))
     })
   };
 };

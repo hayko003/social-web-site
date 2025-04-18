@@ -1,0 +1,52 @@
+.login_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_form_formik {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+input {
+  min-width: 200px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  background-color: aliceblue;
+}
+
+.signIn_btn {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  margin-top: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background-size: 120% auto;
+  background-image:linear-gradient(107deg,rgba(58, 62, 180, 1) 0%, rgba(253, 29, 29, 1) 73%, rgba(252, 176, 69, 1) 100%);
+}
+.signIn_btn:hover {
+  background-position: right center;
+}
+.signIn_btn:active {
+  top: 2px;
+}
+
+.input_wrap_validation {
+  display: flex;
+  flex-direction: column;
+}
+

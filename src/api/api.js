@@ -1,8 +1,11 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://social-network.samuraijs.com/api/1.0",
   withCredentials: true,
+  baseURL: "https://social-network.samuraijs.com/api/1.0",
+  headers: {
+    "API-KEY": "f2347a3b-d257-4053-8f74-25071fb0351b"
+  }
 });
 
 export const SocialAPI = {
@@ -14,5 +17,11 @@ export const SocialAPI = {
     },
     setLogin(email, password){
       return instance.post(`/auth/login`, {email, password})
+    },
+    changePhoto(file){
+      debugger
+      let formData = new FormData()
+      formData.append("file", file)
+      return instance.put(`/profile/photo`, {formData})
     }
 }
