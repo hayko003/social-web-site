@@ -6,13 +6,39 @@
     flex-wrap: wrap;
 }
 
-.active-page {
-    background-color: rebeccapurple;
-}
-
 .pagination {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin: 15px;
 }
+
+.users_finder_wrap {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+button {
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 2px solid rgb(128, 128, 128);
+    color: rgb(128, 128, 128);
+    background: 0 0;
+    padding: 8px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+    font-weight: 800;
+    font-size: 16px;
+    height: 42px;
+  }
+  
+  button:hover{
+      background-color: rgb(255, 0, 0);
+      color: #fff;
+  }
+  

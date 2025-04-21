@@ -7,6 +7,7 @@ import "./userPage.css";
 
 function UserPage() {
   const [portionNumber, setPortionNumber] = useState(1);
+
   const {
     users,
     currentPage,
@@ -14,6 +15,12 @@ function UserPage() {
     totalUsersPageCount,
     isFetching,
   } = useSelector((state) => state.initState);
+
+  const [search, setSearch] = useState("")
+  const findUser = users.filter((elem) =>
+    elem.name?.toLowerCase().includes(search.toLowerCase())
+  );
+    
   const dispatch = useDispatch();
 
   const leftPortionSize = (portionNumber - 1) * 10 + 1;
@@ -40,7 +47,9 @@ function UserPage() {
   };
 
   return (
-    <div>
+    <div className="users_finder_wrap">
+      <input value={search} onChange={(e) => setSearch(e.target.value)} />
+
       <div className="pagination">
         {portionNumber > 1 && (
           <button onClick={() => setPortionNumber(portionNumber - 1)}>
@@ -71,7 +80,7 @@ function UserPage() {
           ? Array(10)
               .fill(0)
               .map((_, i) => <UserCard key={i} isLoading={true} />)
-          : users?.map((elem) => {
+          : findUser?.map((elem) => {
               return <UserCard key={elem.id} user={elem} />;
             })}
       </div>

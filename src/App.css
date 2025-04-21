@@ -5,6 +5,8 @@
   font-family: "Montserrat", sans-serif;
 }
 
+
+
 img {
   width: 200px;
   border-radius: 50%;
@@ -13,6 +15,40 @@ img {
 }
 
 .header_logo {
-  width: 100px;
-  
+  width: 100px; 
+}
+
+.nav_wrap {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.icons_wrap {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.navLink_text {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.active {
+  display: flex;
+  align-items: center;
+  color: purple;
+  text-decoration: none;
+}
+
+.users_logo {
+  width: 30px;
+  padding-left: 5px;
+  border-radius: 0;
+}
+
+a {
+  text-decoration: none;
 }

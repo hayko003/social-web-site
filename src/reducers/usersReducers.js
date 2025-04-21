@@ -4,6 +4,7 @@ const GET_ALL = "get-all";
 const IS_FETCHING = "is-fetching";
 const CHANGE_PAGE = "change-page";
 const TOTAL_USER_COUNT = "total-user-count";
+
 const initState = {
   users: [],
   isFetching: false,

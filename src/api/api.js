@@ -19,9 +19,14 @@ export const SocialAPI = {
       return instance.post(`/auth/login`, {email, password})
     },
     changePhoto(file){
-      debugger
       let formData = new FormData()
       formData.append("file", file)
       return instance.put(`/profile/photo`, {formData})
+    },
+    getStatus(userId) {
+      return instance.get(`/profile/status/${userId}`)
+    },
+    changeStatus(newStatus) {
+      return instance.put(`/profile/status`, {status: newStatus})
     }
 }

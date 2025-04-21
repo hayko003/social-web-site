@@ -16,3 +16,28 @@
     font-size: 16px;
     text-overflow: ellipsis;
 }
+
+.follow_btn {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background-size: 120% auto;
+    background-image:linear-gradient(107deg,rgba(58, 62, 180, 1) 0%, rgba(253, 29, 29, 1) 73%, rgba(252, 176, 69, 1) 100%);
+  }
+  .follow_btn:hover {
+    background-position: right center;
+  }
+  .follow_btn:active {
+    top: 2px;
+  }
+  
